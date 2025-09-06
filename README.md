@@ -25,9 +25,10 @@ This project is structured as a **Book Library**, where users can store and fetc
 - ✅ Easy to extend for handling multiple books  
 
 ---
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/2e8654a4-4372-4f96-9e51-081f1212347a" />
 
 ## 🔹 Deployed Smart Contract
-Contract Address: **XXX**
+https://lora.algokit.io/testnet/application/745461172
 
 ---
 
