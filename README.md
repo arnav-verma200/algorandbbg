@@ -1,8 +1,8 @@
 
-# 📚 XXX – Algorand dApp
+# 📚 BookLibrary – Algorand dApp
 ````
 ## 🔹 Project Description
-XXX is a simple decentralized application (dApp) built on the **Algorand blockchain**.  
+BookLibrary is a simple decentralized application (dApp) built on the **Algorand blockchain**.  
 It showcases how to create and interact with a smart contract using **TypeScript**, making it a beginner-friendly introduction to Algorand development.  
 
 This project is structured as a **Book Library**, where users can store and fetch book details directly on-chain. It’s perfect for developers exploring how global state works in Algorand contracts.
