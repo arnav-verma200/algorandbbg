@@ -1,22 +1,84 @@
-# algorandbbg
 
-Welcome to your new AlgoKit project!
+# 📚 XXX – Algorand dApp
+````
+## 🔹 Project Description
+XXX is a simple decentralized application (dApp) built on the **Algorand blockchain**.  
+It showcases how to create and interact with a smart contract using **TypeScript**, making it a beginner-friendly introduction to Algorand development.  
 
-This is your workspace root. A `workspace` in AlgoKit is an orchestrated collection of standalone projects (backends, smart contracts, frontend apps and etc).
+This project is structured as a **Book Library**, where users can store and fetch book details directly on-chain. It’s perfect for developers exploring how global state works in Algorand contracts.
 
-By default, `projects_root_path` parameter is set to `projects`. Which instructs AlgoKit CLI to create a new directory under `projects` directory when new project is instantiated via `algokit init` at the root of the workspace.
+---
 
-## Getting Started
+## 🔹 What it does
+- Stores a book’s **title** and **author** in Algorand global state.  
+- Provides a function to **add a new book**.  
+- Offers a function to **retrieve the last added book**.  
+- Serves as a clear and minimal example of Algorand contract programming.  
 
-To get started refer to `README.md` files in respective sub-projects in the `projects` directory.
+---
 
-To learn more about algokit, visit [documentation](https://github.com/algorandfoundation/algokit-cli/blob/main/docs/algokit.md).
+## 🔹 Features
+- ✅ Written in **TypeScript**  
+- ✅ Beginner-friendly smart contract example  
+- ✅ Uses **Global State** for data storage  
+- ✅ Includes `AddBook()` and `GetBook()` functions  
+- ✅ Easy to extend for handling multiple books  
 
-### GitHub Codespaces
+---
 
-To get started execute:
+## 🔹 Deployed Smart Contract
+Contract Address: **XXX**
 
-1. `algokit generate devcontainer` - invoking this command from the root of this repository will create a `devcontainer.json` file with all the configuration needed to run this project in a GitHub codespace. [Run the repository inside a codespace](https://docs.github.com/en/codespaces/getting-started/quickstart) to get started.
-2. `algokit init` - invoke this command inside a github codespace to launch an interactive wizard to guide you through the process of creating a new AlgoKit project
+---
 
-Powered by [Copier templates](https://copier.readthedocs.io/en/stable/).
+## 🔹 Smart Contract Code
+```ts
+//paste your code
+````
+
+---
+
+## 🚀 Getting Started
+
+1. Clone this repository
+
+   ```bash
+   git clone https://github.com/yourusername/XXX.git
+   cd XXX
+   ```
+2. Install dependencies
+
+   ```bash
+   npm install
+   ```
+3. Deploy the contract to Algorand testnet
+
+   ```bash
+   algokit project deploy testnet
+   ```
+
+---
+
+## 💡 Future Improvements
+
+* Support for **multiple book entries** instead of overwriting
+* Add **ownership restrictions** (only contract creator can add books)
+* Build a **frontend UI** for easy interaction
+* Extend with **search and list features**
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Fork this repo, add your ideas, and submit a pull request.
+
+---
+
+## 📜 License
+
+This project is released under the **MIT License**.
+
+```
+
+Do you also want me to write a **short one-line GitHub tagline** (goes right under repo name) that matches this README?
+```
