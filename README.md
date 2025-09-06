@@ -78,7 +78,3 @@ Contributions are welcome! Fork this repo, add your ideas, and submit a pull req
 
 This project is released under the **MIT License**.
 
-```
-
-Do you also want me to write a **short one-line GitHub tagline** (goes right under repo name) that matches this README?
-```
