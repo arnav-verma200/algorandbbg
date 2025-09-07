@@ -1,0 +1,132 @@
+#pragma version 10
+#pragma typetrack false
+
+// @algorandfoundation/algorand-typescript/arc4/index.d.ts::Contract.approvalProgram() -> uint64:
+main:
+    intcblock 1 0
+    bytecblock "bookRecord" 0x151f7c75
+    txn ApplicationID
+    bnz main_after_if_else@2
+    // smart_contracts/hello_world/contract.algo.ts:7
+    // bookRecord = GlobalState<string>({ key: "bookRecord", initialValue: "" })
+    bytec_0 // "bookRecord"
+    pushbytes ""
+    app_global_put
+
+main_after_if_else@2:
+    // smart_contracts/hello_world/contract.algo.ts:4
+    // export class BookLibrary extends Contract {
+    txn NumAppArgs
+    bz main_bare_routing@9
+    pushbytess 0x2da91f54 0x654129ce // method "AddBook(string,string)string", method "GetBook()string"
+    txna ApplicationArgs 0
+    match main_AddBook_route@5 main_GetBook_route@6
+
+main_after_if_else@13:
+    // smart_contracts/hello_world/contract.algo.ts:4
+    // export class BookLibrary extends Contract {
+    intc_1 // 0
+    return
+
+main_GetBook_route@6:
+    // smart_contracts/hello_world/contract.algo.ts:17
+    // GetBook(): string {
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    callsub GetBook
+    dup
+    len
+    itob
+    extract 6 2
+    swap
+    concat
+    bytec_1 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_0 // 1
+    return
+
+main_AddBook_route@5:
+    // smart_contracts/hello_world/contract.algo.ts:10
+    // AddBook(title: string, author: string): string {
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // smart_contracts/hello_world/contract.algo.ts:4
+    // export class BookLibrary extends Contract {
+    txna ApplicationArgs 1
+    extract 2 0
+    txna ApplicationArgs 2
+    extract 2 0
+    // smart_contracts/hello_world/contract.algo.ts:10
+    // AddBook(title: string, author: string): string {
+    callsub AddBook
+    dup
+    len
+    itob
+    extract 6 2
+    swap
+    concat
+    bytec_1 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_0 // 1
+    return
+
+main_bare_routing@9:
+    // smart_contracts/hello_world/contract.algo.ts:4
+    // export class BookLibrary extends Contract {
+    txn OnCompletion
+    bnz main_after_if_else@13
+    txn ApplicationID
+    !
+    assert // can only call when creating
+    intc_0 // 1
+    return
+
+
+// smart_contracts/hello_world/contract.algo.ts::BookLibrary.AddBook(title: bytes, author: bytes) -> bytes:
+AddBook:
+    // smart_contracts/hello_world/contract.algo.ts:10
+    // AddBook(title: string, author: string): string {
+    proto 2 1
+    // smart_contracts/hello_world/contract.algo.ts:11
+    // const record = `Title: ${title}, Author: ${author}`
+    pushbytes "Title: "
+    frame_dig -2
+    concat
+    pushbytes ", Author: "
+    concat
+    frame_dig -1
+    concat
+    // smart_contracts/hello_world/contract.algo.ts:7
+    // bookRecord = GlobalState<string>({ key: "bookRecord", initialValue: "" })
+    bytec_0 // "bookRecord"
+    // smart_contracts/hello_world/contract.algo.ts:12
+    // this.bookRecord.value = record
+    swap
+    app_global_put
+    // smart_contracts/hello_world/contract.algo.ts:13
+    // return title // return title just as a confirmation
+    frame_dig -2
+    retsub
+
+
+// smart_contracts/hello_world/contract.algo.ts::BookLibrary.GetBook() -> bytes:
+GetBook:
+    // smart_contracts/hello_world/contract.algo.ts:7
+    // bookRecord = GlobalState<string>({ key: "bookRecord", initialValue: "" })
+    intc_1 // 0
+    bytec_0 // "bookRecord"
+    app_global_get_ex
+    assert // check GlobalState exists
+    // smart_contracts/hello_world/contract.algo.ts:18
+    // return this.bookRecord.value
+    retsub
