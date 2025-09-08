@@ -31,7 +31,8 @@ This project is structured as a **Book Library**, where users can store and fetc
 ---
 
 ## 🔹 Deployed Smart Contract
-https://lora.algokit.io/testnet/application/745461172
+https://lora.algokit.io/testnet/application/745553642
+
 
 ---
 
