@@ -1,6 +1,6 @@
 
 # 📚 BookLibrary – Algorand dApp
-![alt text](image.png)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/927dde6b-6510-44e5-b392-bffa68cebf13" />
 https://lora.algokit.io/testnet/application/745553642
 ````
 ## 🔹 Project Description
