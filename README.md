@@ -2,7 +2,9 @@
 # 📚 BookLibrary – Algorand dApp
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/927dde6b-6510-44e5-b392-bffa68cebf13" />
 https://lora.algokit.io/testnet/application/745553642
-````
+
+
+```
 ## 🔹 Project Description
 BookLibrary is a simple decentralized application (dApp) built on the **Algorand blockchain**.  
 It showcases how to create and interact with a smart contract using **TypeScript**, making it a beginner-friendly introduction to Algorand development.  
